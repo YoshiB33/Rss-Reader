@@ -118,11 +118,11 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="AppDisplayName" xml:space="preserve">
-    <value>RSS_Reader</value>
+    <value>RSS Reader</value>
     <comment>Application display name</comment>
   </data>
   <data name="AppDescription" xml:space="preserve">
-    <value>RSS_Reader</value>
+    <value>RSS Reader</value>
     <comment>Application description</comment>
   </data>
   <data name="Shell_Main.Content" xml:space="preserve">
@@ -224,5 +224,21 @@
   <data name="Create_Button.Content" xml:space="preserve">
     <value>Create</value>
     <comment>Create</comment>
+  </data>
+  <data name="Settings_Language.Text" xml:space="preserve">
+    <value>Currentry supported languages (You must restart the application for this to work)</value>
+    <comment>Currentry supported languages</comment>
+  </data>
+  <data name="Settings_Language_English.Content" xml:space="preserve">
+    <value>English</value>
+    <comment>Language: English</comment>
+  </data>
+  <data name="Settings_Language_Swedish.Content" xml:space="preserve">
+    <value>Swedish</value>
+    <comment>Language: Swedish</comment>
+  </data>
+  <data name="Settings_Language_Button.Content" xml:space="preserve">
+    <value>Submit</value>
+    <comment>Submit and refresh page</comment>
   </data>
 </root>

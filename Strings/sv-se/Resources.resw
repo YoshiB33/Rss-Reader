@@ -141,6 +141,22 @@
     <value>Settings page placeholder text.  Your app description goes here.</value>
     <comment>Om den här applikationsbeskrivningen för Inställningar</comment>
   </data>
+  <data name="Settings_Language.Text" xml:space="preserve">
+    <value>Språk som stöds för närvarande (Du måste starta om appen för att det här ska fungera)</value>
+    <comment>Språk som stöds för närvarande</comment>
+  </data>
+  <data name="Settings_Language_Button.Content" xml:space="preserve">
+    <value>Skicka in</value>
+    <comment>Skicka in och uppdatera sida</comment>
+  </data>
+  <data name="Settings_Language_English.Content" xml:space="preserve">
+    <value>Engelska (English)</value>
+    <comment>Språk: Engelska (English)</comment>
+  </data>
+  <data name="Settings_Language_Swedish.Content" xml:space="preserve">
+    <value>Svenska (Swedish)</value>
+    <comment>Språk: Svenska (Swedish)</comment>
+  </data>
   <data name="Settings_Personalization.Text" xml:space="preserve">
     <value>Personalisering</value>
     <comment>Anpassningstext för Inställningar</comment>

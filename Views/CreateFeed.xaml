@@ -9,7 +9,7 @@
     mc:Ignorable="d">
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
         <Grid>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="85,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="73" Width="556"/>
+            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="85,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="73" Width="556" CornerRadius="10"/>
             <Button x:Uid="Create_Button" Margin="804,0,0,0" Height="74" Width="157" CornerRadius="10" FontSize="30"/>
             <TextBlock HorizontalAlignment="Left" x:Uid="Create_Label" Margin="216,372,0,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="68" Width="299"/>
         </Grid>
