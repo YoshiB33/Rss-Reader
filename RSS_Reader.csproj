@@ -242,9 +242,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\RSS Reader.Core\RSS Reader.Core.csproj">
+    <ProjectReference Include="..\RSS Reader.Core\RSS_Reader.Core.csproj">
       <Project>{30FF8A19-E13C-492E-8371-CA347D47F809}</Project>
-      <Name>RSS Reader.Core</Name>
+      <Name>RSS_Reader.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
