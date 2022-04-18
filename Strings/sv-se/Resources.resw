@@ -130,8 +130,11 @@
     <comment>Skapa</comment>
   </data>
   <data name="Create_Label.Text" xml:space="preserve">
-    <value>Skriv länk här</value>
+    <value>Skriv visningsnamn här</value>
     <comment>Skriv länk till xml sida här</comment>
+  </data>
+  <data name="Create_Label_Link.Text" xml:space="preserve">
+    <value>Skriv länk här</value>
   </data>
   <data name="Settings_About.Text" xml:space="preserve">
     <value>Om appen</value>
@@ -146,7 +149,7 @@
     <comment>Språk som stöds för närvarande</comment>
   </data>
   <data name="Settings_Language_Button.Content" xml:space="preserve">
-    <value>Skicka in</value>
+    <value>Starta om</value>
     <comment>Skicka in och uppdatera sida</comment>
   </data>
   <data name="Settings_Language_English.Content" xml:space="preserve">

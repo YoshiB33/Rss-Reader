@@ -218,7 +218,7 @@
     <comment>Ad a feed</comment>
   </data>
   <data name="Create_Label.Text" xml:space="preserve">
-    <value>Paste link here</value>
+    <value>Displayname here</value>
     <comment>Paste link to xml page here</comment>
   </data>
   <data name="Create_Button.Content" xml:space="preserve">
@@ -238,7 +238,11 @@
     <comment>Language: Swedish</comment>
   </data>
   <data name="Settings_Language_Button.Content" xml:space="preserve">
-    <value>Submit</value>
+    <value>Restart</value>
     <comment>Submit and refresh page</comment>
+  </data>
+  <data name="Create_Label_Link.Text" xml:space="preserve">
+    <value>Paste link here</value>
+    <comment>Paste link here</comment>
   </data>
 </root>

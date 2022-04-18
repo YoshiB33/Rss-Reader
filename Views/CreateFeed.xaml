@@ -9,9 +9,11 @@
     mc:Ignorable="d">
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
         <Grid>
-            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="85,0,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="73" Width="556" CornerRadius="10"/>
-            <Button x:Uid="Create_Button" Margin="804,0,0,0" Height="74" Width="157" CornerRadius="10" FontSize="30"/>
-            <TextBlock HorizontalAlignment="Left" x:Uid="Create_Label" Margin="216,372,0,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Top" Height="68" Width="299"/>
+            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="85,-85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="64" Width="383" CornerRadius="10" RenderTransformOrigin="0.5,0.5"/>
+            <Button x:Uid="Create_Button" Margin="505,0,0,0" Height="65" Width="117" CornerRadius="10" FontSize="30" VerticalAlignment="Center"/>
+            <TextBlock TextAlignment="Center" HorizontalAlignment="Left" x:Uid="Create_Label" Margin="84,-200,0,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Center" Height="60" Width="379"/>
+            <TextBox HorizontalAlignment="Left" FontSize="35" Margin="85,85,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Center" Height="64" Width="383" CornerRadius="10" RenderTransformOrigin="0.5,0.5"/>
+            <TextBlock HorizontalAlignment="Left" TextAlignment="Center" x:Uid="Create_Label_Link" Margin="84,230,0,0" TextWrapping="Wrap" FontSize="30" VerticalAlignment="Center" Height="60" Width="381"/>
         </Grid>
     </Grid>
 </Page>
