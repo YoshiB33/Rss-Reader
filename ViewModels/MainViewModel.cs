@@ -8,6 +8,7 @@ namespace RSS_Reader.ViewModels
     {
         public MainViewModel()
         {
+            
         }
     }
 }

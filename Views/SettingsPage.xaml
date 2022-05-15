@@ -64,7 +64,7 @@
                         Default
                     </RadioButton.CommandParameter>
                 </RadioButton>
-                <Button x:Uid="Settings_Language_Button" Width="80" Height="35" CornerRadius="7" Margin="{StaticResource SmallTopMargin}" Click="Button_Click"/>
+                <Button x:Uid="Settings_Language_Button" Width="90" Height="35" CornerRadius="7" Margin="{StaticResource SmallTopMargin}" Click="Button_Click"/>
             </StackPanel>
 
             <TextBlock x:Uid="Settings_About" Style="{ThemeResource SubtitleTextBlockStyle}" Margin="{StaticResource MediumTopMargin}"/>
