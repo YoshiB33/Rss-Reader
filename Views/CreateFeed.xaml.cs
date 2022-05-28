@@ -8,6 +8,7 @@ using System.IO;
 using System.Text.Json;
 using RSS_Reader.ViewModels;
 using Windows.Data.Json;
+using RSS_Reader.Helpers;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -32,7 +33,6 @@ namespace RSS_Reader.Views
             { LinkTextBox.Text = value; }
         }
 
-
         public CreateFeed()
         {
             InitializeComponent();
@@ -44,16 +44,8 @@ namespace RSS_Reader.Views
             LinkTextBox.Text = string.Empty;
         }
 
-        public void SerializeStrings()
-        {
-            string jsonStringDisplay = JsonSerializer.Serialize(DisplayName);
-            string jsonStringLink = JsonSerializer.Serialize(Link);
-            Consolle = jsonStringDisplay + " " + jsonStringLink;
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            SerializeStrings();
             EraseBoxes();
         }
 

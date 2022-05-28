@@ -200,6 +200,9 @@
     <value>WebView</value>
     <comment>Navigationsvyobjektets namn för WebView</comment>
   </data>
+  <data name="View_Refreash.Text" xml:space="preserve">
+    <value>Uppdatera</value>
+  </data>
   <data name="WebView_BrowserBackButton.[using:Windows.UI.Xaml.Automation]AutomationProperties.Name" xml:space="preserve">
     <value>Tillbaka</value>
     <comment>WebView bakåtknapp automatiseringsnamnegenskap för WebView</comment>

@@ -245,4 +245,7 @@
     <value>Paste link here</value>
     <comment>Paste link here</comment>
   </data>
+  <data name="View_Refreash.Text" xml:space="preserve">
+    <value>Refresh</value>
+  </data>
 </root>
