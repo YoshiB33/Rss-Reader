@@ -7,26 +7,30 @@
     Style="{StaticResource PageStyle}"
     mc:Ignorable="d">
     <Grid x:Name="ContentArea" Margin="{StaticResource MediumLeftRightMargin}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="97*"/>
+        </Grid.RowDefinitions>
         <Grid
-            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}">
+            Background="{ThemeResource SystemControlPageBackgroundChromeLowBrush}" Grid.RowSpan="2">
         </Grid>
-        <ScrollViewer>
+        <ScrollViewer Grid.RowSpan="2">
             <Grid>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Top" HorizontalAlignment="Center">
                     <Button Width="100" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Margin="0,0,20,0">
                         <TextBlock x:Uid="View_Refreash"/>
                     </Button>
-                    <TextBlock x:Name="Button1" MaxHeight="30" MaxWidth="170" HorizontalAlignment="Center" Margin="0,7,15,0"/>
+                    <TextBlock x:Name="TitleBox" MaxHeight="30" MaxWidth="200" HorizontalAlignment="Center" Margin="0,7,15,0"/>
                     <TextBox x:Name="Link" VerticalAlignment="Top" HorizontalAlignment="Center" Height="30" Width="270" TextChanged="Link_TextChanged"/>
                 </StackPanel>
 
                 <StackPanel x:Name="ButtonPanel" Margin="0,40,0,0" >
-
+                    
                 </StackPanel>
             </Grid>
 
         </ScrollViewer>
 
-        <ScrollBar HorizontalAlignment="Right" Margin="0"/>
+        <ScrollBar HorizontalAlignment="Right" Margin="0" Grid.RowSpan="2"/>
     </Grid>
 </Page>

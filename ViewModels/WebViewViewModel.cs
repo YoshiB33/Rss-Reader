@@ -11,7 +11,6 @@ namespace RSS_Reader.ViewModels
 {
     public class WebViewViewModel : ObservableObject
     {
-        // TODO WTS: Set the URI of the page to show by default
         private const string DefaultUrl = "https://games.yoshib.se";
 
         private Uri _source;

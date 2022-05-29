@@ -1,10 +1,12 @@
 ﻿using System;
 using System.IO;
+using Windows.UI.Xaml.Controls;
 
 using RSS_Reader.Services;
 
 using Windows.ApplicationModel.Activation;
 using Windows.UI.Xaml;
+using Windows.ApplicationModel.Core;
 
 namespace RSS_Reader
 {
@@ -39,10 +41,16 @@ namespace RSS_Reader
             await ActivationService.ActivateAsync(args);
         }
 
-        private void OnAppUnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
+        private async void OnAppUnhandledException(object sender, Windows.UI.Xaml.UnhandledExceptionEventArgs e)
         {
             // TODO WTS: Please log and handle the exception as appropriate to your scenario
-            // For more info see https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.unhandledexception
+            ContentDialog contentDialog = new ContentDialog()
+            {
+                Title = "Unhandled exception",
+                Content = "You need to restart your app. \nPlease report this to the developer.",
+                CloseButtonText = "Ok"
+            };
+            await contentDialog.ShowAsync();
         }
 
         private ActivationService CreateActivationService()

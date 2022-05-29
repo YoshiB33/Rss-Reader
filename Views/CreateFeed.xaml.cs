@@ -10,16 +10,17 @@ using RSS_Reader.ViewModels;
 using Windows.Data.Json;
 using RSS_Reader.Helpers;
 
-// The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=234238
-
 namespace RSS_Reader.Views
 {
     /// <summary>
-    /// An empty page that can be used on its own or navigated to within a Frame.
+    /// The backend for the CreatePage View.
     /// </summary>
 
     public sealed partial class CreateFeed : Page
     {
+        /// <summary>
+        /// Initializes strings
+        /// </summary>
         public string DisplayName
         { get { return DisplayNameTextBox.Text; } set { DisplayNameTextBox.Text = value; } }
 
@@ -27,12 +28,11 @@ namespace RSS_Reader.Views
         { get { return ConsolleJsonViewer.Text; } set { ConsolleJsonViewer.Text = value; } }
 
         public string Link
-        {
-            get => LinkTextBox.Text;
-            set
-            { LinkTextBox.Text = value; }
-        }
+        { get { return LinkTextBox.Text; } set { LinkTextBox.Text = value; } }
 
+        /// <summary>
+        /// Initializes the page and a few functions
+        /// </summary>
         public CreateFeed()
         {
             InitializeComponent();

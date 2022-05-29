@@ -141,7 +141,7 @@
     <comment>Om denna applikationstitel för Inställningar</comment>
   </data>
   <data name="Settings_AboutDescription.Text" xml:space="preserve">
-    <value>Settings page placeholder text.  Your app description goes here.</value>
+    <value>Detta är en RSS Läsare gjord av YoshiB33</value>
     <comment>Om den här applikationsbeskrivningen för Inställningar</comment>
   </data>
   <data name="Settings_Language.Text" xml:space="preserve">

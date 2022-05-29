@@ -10,6 +10,9 @@ using WinUI = Microsoft.UI.Xaml.Controls;
 
 namespace RSS_Reader.Behaviors
 {
+    /// <summary>
+    /// Mostly functions for navigation
+    /// </summary>
     public class NavigationViewHeaderBehavior : Behavior<WinUI.NavigationView>
     {
         private static NavigationViewHeaderBehavior _current;
