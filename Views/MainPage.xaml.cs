@@ -46,7 +46,7 @@ namespace RSS_Reader.Views
 
                 // Button size
                 newButton.Height = 330;
-                newButton.Width = 770;
+                newButton.Width = 750;
 
                 // Font size
                 newButton.FontSize = 20;
@@ -55,6 +55,7 @@ namespace RSS_Reader.Views
                 newButton.Margin = new Thickness(0,10,0,10);
 
                 /// Add info
+                // Stackpanel
                 StackPanel stackPanel = new StackPanel();
                 stackPanel.Orientation = Orientation.Vertical;
                 stackPanel.Margin = new Thickness(10);
@@ -68,6 +69,7 @@ namespace RSS_Reader.Views
                 newTitleTextBlock.HorizontalAlignment = HorizontalAlignment.Center;
                 newTitleTextBlock.VerticalAlignment = VerticalAlignment.Center;
                 newTitleTextBlock.Margin = new Thickness(0,10,0,0);
+                newTitleTextBlock.TextWrapping = TextWrapping.Wrap;
                 stackPanel.Children.Add(newTitleTextBlock);
 
                 // Add description text
@@ -76,6 +78,7 @@ namespace RSS_Reader.Views
                 newDescriptionTextBlock.HorizontalAlignment = HorizontalAlignment.Left;
                 newDescriptionTextBlock.VerticalAlignment = VerticalAlignment.Bottom;
                 newDescriptionTextBlock.FontSize = 13;
+                newDescriptionTextBlock.TextWrapping = TextWrapping.Wrap;
                 stackPanel.Children.Add(newDescriptionTextBlock);
 
                 // Add Date/Time Textblock
@@ -103,5 +106,7 @@ namespace RSS_Reader.Views
         {
             _ = ReadRSS();
         }
+
+
     }
 }

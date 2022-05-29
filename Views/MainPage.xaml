@@ -23,7 +23,7 @@
                     <TextBlock x:Name="TitleBox" MaxHeight="30" MaxWidth="200" HorizontalAlignment="Center" Margin="0,7,15,0"/>
                     <TextBox x:Name="Link" VerticalAlignment="Top" HorizontalAlignment="Center" Height="30" Width="270" TextChanged="Link_TextChanged"/>
                 </StackPanel>
-
+                
                 <StackPanel x:Name="ButtonPanel" Margin="0,40,0,0" >
                     
                 </StackPanel>
