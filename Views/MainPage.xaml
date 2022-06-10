@@ -20,7 +20,7 @@
                     <Button Width="100" Height="35" HorizontalAlignment="Center" VerticalAlignment="Top" Click="Button_Click" Margin="0,0,20,0">
                         <TextBlock x:Uid="View_Refreash"/>
                     </Button>
-                    <TextBlock x:Name="TitleBox" MaxHeight="30" MaxWidth="200" HorizontalAlignment="Center" Margin="0,7,15,0"/>
+                    <Button x:Name="TitleBox" Visibility="Collapsed" Margin="0,7,15,0"/>
                     <TextBox x:Name="Link" VerticalAlignment="Top" HorizontalAlignment="Center" Height="30" Width="270" TextChanged="Link_TextChanged"/>
                 </StackPanel>
                 

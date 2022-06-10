@@ -26,7 +26,7 @@ namespace RSS_Reader.Views
         // String for URL TextBox
         public string Url { get { return Link.Text; } set { Link.Text = value; } }
         // String for Title TextBlock
-        public string Title { set { TitleBox.Text = value; } }
+        public string Title { set { TitleBox.Content = value; } }
 
         // Initializes Mainpage
         public MainPage()
@@ -38,8 +38,16 @@ namespace RSS_Reader.Views
         {
             // Reads the feed and writes title
             var feed = await FeedReader.ReadAsync(Url);
+            TitleBox.Visibility = Visibility.Visible;
             Title = feed.Title;
+            TitleBox.Click += Title_Click;
             string ImgUrl = feed.ImageUrl;
+
+            void Title_Click(object sender, RoutedEventArgs e)
+            {
+                WebViewViewModel.DefaultUrl = feed.Link;
+                this.Frame.Navigate(typeof(WebViewPage), null);
+            }
 
             // Makes a new button per item in xml feed
             foreach (FeedItem item in feed.Items)
@@ -86,13 +94,21 @@ namespace RSS_Reader.Views
                 newDescriptionTextBlock.TextWrapping = TextWrapping.Wrap;
                 stackPanel.Children.Add(newDescriptionTextBlock);
 
-                // Add Date/Time Textblock
+                // Add Date/Time Text
                 TextBlock newDateTextblock = new TextBlock();
                 newDateTextblock.FontSize = 10;
                 newDateTextblock.Text = item.PublishingDateString;
                 newDateTextblock.HorizontalAlignment = HorizontalAlignment.Center;
                 newDateTextblock.VerticalAlignment = VerticalAlignment.Bottom;
                 stackPanel.Children.Add(newDateTextblock);
+
+                // Add Author Text
+                TextBlock authurText = new TextBlock();
+                authurText.FontSize = 10;
+                authurText.TextWrapping = TextWrapping.Wrap;
+                authurText.Text = item.Author;
+                authurText.VerticalAlignment = VerticalAlignment.Bottom;
+                stackPanel.Children.Add(authurText);
 
                 // Set button to stackpanel
                 ButtonPanel.Children.Add(newButton);
@@ -103,6 +119,7 @@ namespace RSS_Reader.Views
                     this.Frame.Navigate(typeof(WebViewPage), null);
                 }
             }
+
         }
 
 
@@ -112,6 +129,10 @@ namespace RSS_Reader.Views
             // Resetts the stackpanel
             ButtonPanel.Children.Clear();
 
+            // Resetts the title
+            Title = "";
+            TitleBox.Visibility = Visibility.Collapsed;
+
             // Updates the feed
             _ = ReadRSS();
         }
@@ -120,6 +141,8 @@ namespace RSS_Reader.Views
         private void Link_TextChanged(object sender, TextChangedEventArgs e)
         {
             ButtonPanel.Children.Clear();
+            Title = "";
+            TitleBox.Visibility= Visibility.Collapsed;
             _ = ReadRSS();
         }
 
