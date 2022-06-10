@@ -11,7 +11,7 @@ namespace RSS_Reader.ViewModels
 {
     public class WebViewViewModel : ObservableObject
     {
-        public string DefaultUrl = "https://yoshib.se";
+        public static string DefaultUrl = "https://yoshib.se";
 
         private Uri _source;
 

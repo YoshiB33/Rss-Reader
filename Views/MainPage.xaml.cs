@@ -4,6 +4,8 @@ using RSS_Reader.ViewModels;
 using Windows.UI.Xaml.Controls;
 using CodeHollow.FeedReader;
 using Windows.UI.Xaml;
+using RSS_Reader.Helpers;
+using System;
 
 namespace RSS_Reader.Views
 {
@@ -37,6 +39,7 @@ namespace RSS_Reader.Views
             // Reads the feed and writes title
             var feed = await FeedReader.ReadAsync(Url);
             Title = feed.Title;
+            string ImgUrl = feed.ImageUrl;
 
             // Makes a new button per item in xml feed
             foreach (FeedItem item in feed.Items)
@@ -44,12 +47,15 @@ namespace RSS_Reader.Views
                 // Create a new button
                 Button newButton = new Button();
 
+                // Add button click
+                newButton.Click += newButtonClick;
+
                 // Button size
                 newButton.Height = 330;
                 newButton.Width = 750;
 
                 // Font size
-                newButton.FontSize = 20;
+                newButton.FontSize = 22;
 
                 // Set button margin
                 newButton.Margin = new Thickness(0,10,0,10);
@@ -60,7 +66,6 @@ namespace RSS_Reader.Views
                 stackPanel.Orientation = Orientation.Vertical;
                 stackPanel.Margin = new Thickness(10);
                 newButton.Content = stackPanel;
-
 
                 // Add title text
                 TextBlock newTitleTextBlock = new TextBlock();
@@ -91,12 +96,22 @@ namespace RSS_Reader.Views
 
                 // Set button to stackpanel
                 ButtonPanel.Children.Add(newButton);
+
+                void newButtonClick(object sender, RoutedEventArgs e)
+                {
+                    WebViewViewModel.DefaultUrl = item.Link;
+                    this.Frame.Navigate(typeof(WebViewPage), null);
+                }
             }
         }
+
 
         // When the button is pressed the feed is updated
         private void Button_Click(object sender, Windows.UI.Xaml.RoutedEventArgs e)
         {
+            // Resetts the stackpanel
+            ButtonPanel.Children.Clear();
+
             // Updates the feed
             _ = ReadRSS();
         }
@@ -104,6 +119,7 @@ namespace RSS_Reader.Views
         // When the link changes the feed update
         private void Link_TextChanged(object sender, TextChangedEventArgs e)
         {
+            ButtonPanel.Children.Clear();
             _ = ReadRSS();
         }
 
